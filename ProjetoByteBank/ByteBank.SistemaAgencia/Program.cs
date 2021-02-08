@@ -12,13 +12,24 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            string url = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDEstino=dolar";
-            ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL(url);
-            string valor = (extrator.GetValor("moeda"));
-            Console.WriteLine("Valor da moeda Destino: " + valor);
+            
 
-            valor = (extrator.GetValor("moedaOrigem"));
-            Console.WriteLine("Valor da moeda Origem : " + valor);
+
+            Cliente cliente1 = new Cliente("11122233396", "Carlos");
+            Cliente cliente2 = new Cliente("11122233396", "Rodrigo");
+
+            if(cliente1.Equals(cliente2))
+            {
+                Console.WriteLine("Os objetos possuem o mesmo identificador");
+            }
+
+            ContaCorrente conta1 = new ContaCorrente(886, 117886);
+            ContaCorrente conta2 = new ContaCorrente(886, 117886);
+
+            if (conta1.Equals(conta2))
+            {
+                Console.WriteLine("Contas identicas");
+            }
             
             Console.ReadLine();
         }
@@ -37,7 +48,13 @@ namespace ByteBank.SistemaAgencia
 
 
 
+/*string url = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDEstino=dolar";
+            ExtratorValorDeArgumentosURL extrator = new ExtratorValorDeArgumentosURL(url);
+            string valor = (extrator.GetValor("moeda"));
+            Console.WriteLine("Valor da moeda Destino: " + valor);
 
+            valor = (extrator.GetValor("moedaOrigem"));
+            Console.WriteLine("Valor da moeda Origem : " + valor);*/
 
 
 
