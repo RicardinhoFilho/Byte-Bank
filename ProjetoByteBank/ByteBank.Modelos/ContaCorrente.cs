@@ -124,7 +124,11 @@ namespace ByteBank.Modelos
 
             contaDestino.Depositar(valor);
         }
-
+        /// <summary>
+        ///  Compara 2 objetos pelo número da agência e pelo número da conta
+        /// </summary>
+        /// <param name="obj"> deve ser do tipo ContaCorrente</param>
+        /// <returns></returns>
         public override bool Equals(object obj)
         {
             ContaCorrente outraContaCorrente = obj as ContaCorrente;

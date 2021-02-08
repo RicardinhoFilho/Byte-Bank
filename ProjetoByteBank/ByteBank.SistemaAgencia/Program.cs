@@ -12,10 +12,74 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            
+
+            ListaContaCorrente lista = new ListaContaCorrente(20);
+
+            lista.Adicionar(new ContaCorrente(886, 886125));
+            lista.Adicionar(new ContaCorrente(886, 886126));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
+            lista.Adicionar(new ContaCorrente(886, 886127));
 
 
-            Cliente cliente1 = new Cliente("11122233396", "Carlos");
+
+
+            Console.ReadLine();
+
+        }    
+    }
+}
+
+
+
+
+
+
+
+
+
+/*   ContaCorrente[] conta = new ContaCorrente[]
+            {
+                new ContaCorrente(886,117886),
+                new ContaCorrente(886,182886),
+                new ContaCorrente(886,446886),
+            };
+
+            for (int i = 0; i < conta.Length; i++)
+            {
+
+                Console.WriteLine($"Agência Conta[{i}] = {conta[i].Agencia}");
+                Console.WriteLine($"Número De Conta[{i}] = {conta[i].Numero} ");
+
+            }
+*/
+
+
+
+
+/*
+ Cliente cliente1 = new Cliente("11122233396", "Carlos");
             Cliente cliente2 = new Cliente("11122233396", "Rodrigo");
 
             if(cliente1.Equals(cliente2))
@@ -33,19 +97,7 @@ namespace ByteBank.SistemaAgencia
             
             Console.ReadLine();
         }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
+ */
 
 
 /*string url = "http://www.bytebank.com/cambio?moedaOrigem=real&moedaDEstino=dolar";
