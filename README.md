@@ -1,8 +1,12 @@
 # Byte-Bank
-<h1 align="center">Byte-Bank<\h1>
+<h1 align="center">Byte-Bank</h1>
+
+#Descrição e objetivo do projeto
+
 <p>Projeto desenvolvido durante formação(Alura) c# e orientação à objetos com instrutor Guilherme Matheus Costa,
 nesta formação aprendemos desde recursos básicos da linguagem, como variáveis, controle de fluxo e laços de repetição até os principais 
 conceitos do paradigma de orientação a objetos, como classes, herança e interfaces.</p>
+
 <p>
 Depois avançamos para situações de tratamento de  erros na execução de nosso código com a utilização de exceptions, vemos também 
 como criar bibliotecas e documentação para uma distribuição efetiva de nossas aplicações, 
