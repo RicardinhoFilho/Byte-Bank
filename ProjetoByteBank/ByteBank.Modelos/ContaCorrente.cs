@@ -133,6 +133,11 @@ namespace ByteBank.Modelos
         {
             ContaCorrente outraContaCorrente = obj as ContaCorrente;
 
+            if (outraContaCorrente == null)
+            {
+                return false;
+            }
+
             //Numero e agência são os campos que definem se uma conta corrente é repetida ou não
             return (Numero == outraContaCorrente.Numero && Agencia == outraContaCorrente.Agencia);
         }

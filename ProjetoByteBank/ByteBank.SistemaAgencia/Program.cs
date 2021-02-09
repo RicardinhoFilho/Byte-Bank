@@ -12,9 +12,9 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-
+            ContaCorrente contaGui = new ContaCorrente(111, 111);
             ListaContaCorrente lista = new ListaContaCorrente(20);
-
+            lista.Adicionar(contaGui);
             lista.Adicionar(new ContaCorrente(886, 886125));
             lista.Adicionar(new ContaCorrente(886, 886126));
             lista.Adicionar(new ContaCorrente(886, 886127));
@@ -30,17 +30,17 @@ namespace ByteBank.SistemaAgencia
             lista.Adicionar(new ContaCorrente(886, 886127));
             lista.Adicionar(new ContaCorrente(886, 886127));
             lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
+            
+            
+
+            Console.WriteLine("Antes da remoção!");
+            lista.EscreverListaNaTela();
+
+            lista.Remover(contaGui);
+            
+            Console.WriteLine("Depois da remoção!");
+            lista.EscreverListaNaTela();
+
 
 
 

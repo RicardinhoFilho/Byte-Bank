@@ -37,7 +37,38 @@ namespace ByteBank.SistemaAgencia
             _proxPosicao++;
         }
 
+        public void EscreverListaNaTela()
+        {
+            for (int i = 0; i < _proxPosicao; i++)
+            {
+                ContaCorrente conta = _itens[i];
+                Console.WriteLine($"Conta no indíce [{i}]: Agência[{_itens[i].Agencia}] Número da Conta [{_itens[i].Numero}]]");
+            }
+        }
 
+        public void Remover(ContaCorrente item)
+        {
+            int indiceItem = -1;
+
+            for (int i = 0; i < _proxPosicao; i++)
+            {
+                ContaCorrente itemAtual = _itens[i];
+
+                if (itemAtual.Equals(item))
+                {
+                    indiceItem = i;
+                    break;
+                }
+            }
+
+            for (int i = indiceItem; i < _proxPosicao -1; i++)
+            {
+                _itens[i] = _itens[i + 1];
+            }
+
+            _proxPosicao--;
+            _itens[_proxPosicao] = null;
+        }
         private void VerificarCapacidade(int tamanhoNecessario)
         {
             if (_itens.Length >= tamanhoNecessario)
@@ -68,19 +99,6 @@ namespace ByteBank.SistemaAgencia
 
         }
 
-        public void Remover(ContaCorrente item)
-        {
-            int indiceItem = -1;
 
-            for (int i = 0; i < _proxPosicao; i++)
-            {
-                ContaCorrente itemAtual = _itens[i];
-
-                if (itemAtual.Equals(item))
-                {
-                    itemAtual == null;
-                }
-            }
-        }
     }
 }

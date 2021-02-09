@@ -41,5 +41,12 @@
             <exception cref="T:System.ArgumentException">Ocorre quando valor da transferência é menor ou igual a zero</exception>
             <exception cref="T:ByteBank.Modelos.SaldoInsuficienteException">Ocorre quando não à saldo suficiente para ocorrer transferência</exception>
         </member>
+        <member name="M:ByteBank.Modelos.ContaCorrente.Equals(System.Object)">
+            <summary>
+             Compara 2 objetos pelo número da agência e pelo número da conta
+            </summary>
+            <param name="obj"> deve ser do tipo ContaCorrente</param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
