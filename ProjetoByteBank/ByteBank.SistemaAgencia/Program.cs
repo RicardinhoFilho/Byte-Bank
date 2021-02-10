@@ -12,50 +12,51 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ContaCorrente contaGui = new ContaCorrente(111, 111);
-            ListaContaCorrente lista = new ListaContaCorrente(20);
-            lista.Adicionar(contaGui);
-            lista.Adicionar(new ContaCorrente(886, 886125));
-            lista.Adicionar(new ContaCorrente(886, 886126));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            lista.Adicionar(new ContaCorrente(886, 886127));
-            
-            
-
-            Console.WriteLine("Antes da remoção!");
-            lista.EscreverListaNaTela();
-
-            lista.Remover(contaGui);
-            
-            Console.WriteLine("Depois da remoção!");
-            lista.EscreverListaNaTela();
-
-
-
-
+           // ListaDeObjects listaIdades = new ListaDeObjects();
 
             Console.ReadLine();
+            //listaIdades.Adicionar(25);
 
+            //listaIdades.EscreverListaNaTela();
+           
         }    
     }
 }
 
 
 
+/* ContaCorrente contaGui = new ContaCorrente(111, 111);
+            ListaContaCorrente lista = new ListaContaCorrente();
+            /*lista.Adicionar(contaGui);
+            lista.Adicionar(new ContaCorrente(886, 886125));
+            lista.Adicionar(new ContaCorrente(886, 886126));///
 
 
 
+lista.AdicionarVarios(contaGui, new ContaCorrente(886, 886125),
+    new ContaCorrente(886, 886128));
+
+
+
+
+
+Console.WriteLine($"Tamanho da lista = {lista.Tamanho}");
+Console.WriteLine($"Buscando elemento 0 -> Agência: {lista[2].Agencia} Conta: {lista[2].Numero}");
+Console.WriteLine(lista[1]);
+
+
+
+
+Console.ReadLine();
+*/
+
+/*Console.WriteLine("Antes da remoção!");
+            lista.EscreverListaNaTela();
+
+            lista.Remover(contaGui);
+            
+            Console.WriteLine("Depois da remoção!");
+            lista.EscreverListaNaTela();*/
 
 
 

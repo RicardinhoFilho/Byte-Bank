@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="ExtratorValorDeArgumentosURL.cs" />
     <Compile Include="ListaContaCorrente.cs" />
+    <Compile Include="ListaDeObjects.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
