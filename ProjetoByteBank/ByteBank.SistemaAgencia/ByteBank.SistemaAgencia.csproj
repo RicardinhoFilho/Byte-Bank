@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensoes\ListExtensoesGenericas.cs" />
     <Compile Include="ExtratorValorDeArgumentosURL.cs" />
     <Compile Include="ListaContaCorrente.cs" />
     <Compile Include="ListaDeObjects.cs" />
