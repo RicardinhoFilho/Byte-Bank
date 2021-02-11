@@ -12,18 +12,71 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-           // ListaDeObjects listaIdades = new ListaDeObjects();
+            ListaGenerica<int> listaDeIdades = new ListaGenerica<int>();
 
-            Console.ReadLine();
-            //listaIdades.Adicionar(25);
+            listaDeIdades.AdicionarVarios(30, 45, 60, 55, 48, 22);
+            listaDeIdades.EscreverListaNaTela();
+            int somaDeIdades = 0;
+            double mediaDeIdades;
+            for (int i = 0; i < listaDeIdades.Tamanho; i++)
+            {
+                somaDeIdades += listaDeIdades[i];
+            }
+            mediaDeIdades = somaDeIdades / listaDeIdades.Tamanho;
+            Console.WriteLine($"Média de Idades: {mediaDeIdades}");
+            Console.ReadKey();
 
-            //listaIdades.EscreverListaNaTela();
-           
+            ContaCorrente conta1 = new ContaCorrente(885,886125);
+            conta1.Saldo = 300;
+            ContaCorrente conta2 = new ContaCorrente(885, 886128);
+            conta2.Saldo = 600;
+            ContaCorrente conta3 = new ContaCorrente(885, 886120);
+            conta3.Saldo = 130;
+            ContaCorrente conta4 = new ContaCorrente(885, 886124);
+            conta4.Saldo = 200;
+            ContaCorrente conta5 = new ContaCorrente(885, 886140);
+            conta5.Saldo = 1300;
+
+            ListaGenerica<ContaCorrente> listaContaCorrente = new ListaGenerica<ContaCorrente>();
+
+            listaContaCorrente.AdicionarVarios(conta1, conta2, conta3, conta4, conta5);
+            listaContaCorrente.EscreverListaNaTela();
+
+            double somaSaldo = 0;
+            double mediaSaldo;
+
+            for (int i = 0; i < listaContaCorrente.Tamanho; i++)
+            {
+                somaSaldo += (listaContaCorrente[i].Saldo);
+            }
+            mediaSaldo = somaSaldo / listaContaCorrente.Tamanho;
+
+            Console.WriteLine($"Média de saldo : {mediaSaldo}");
+
+            Console.ReadKey();
+
         }    
     }
 }
 
 
+/* ListaDeObjects listaIdades = new ListaDeObjects();
+
+            
+            listaIdades.Adicionar(25);
+            listaIdades.Adicionar(22);
+            listaIdades.Adicionar(23);
+            listaIdades.Adicionar(13);
+
+            listaIdades.EscreverListaNaTela();
+            Console.ReadLine();
+
+
+            ListaDeObjects lista = new ListaDeObjects();
+            lista.Adicionar(new ContaCorrente(886, 886125));
+            lista.Adicionar(new ContaCorrente(886, 886126));
+
+            Console.ReadLine();*/
 
 /* ContaCorrente contaGui = new ContaCorrente(111, 111);
             ListaContaCorrente lista = new ListaContaCorrente();

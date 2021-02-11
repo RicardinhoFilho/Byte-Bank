@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ByteBank.SistemaAgencia
 {
-    class ListaDeObjects
+    class ListaGenerica<T>
     {
-        private Object[] _itens;
+        private T[] _itens;
         private int _proxPosicao;
 
         public int Tamanho
@@ -18,7 +18,7 @@ namespace ByteBank.SistemaAgencia
                 return _proxPosicao;
             }
         }
-        public Object GetItemObjectNoIndice(int indice)
+        public T GetItemNoIndice(int indice)
         {
             if (indice < 0 || indice > _proxPosicao)
             {
@@ -29,7 +29,7 @@ namespace ByteBank.SistemaAgencia
         }
 
 
-        public Object this[int indice]
+        public T this[int indice]
         {
             get
             {
@@ -43,9 +43,9 @@ namespace ByteBank.SistemaAgencia
         ///     Define uma lista de Contas Correntes adicionadas pelo usuário 
         /// </summary>
         /// <param name="capacidadeInicial">É um parâmetro opcional dado para facilitar na definição do tamanho da lista</param>
-        public ListaDeObjects(int capacidadeInicial = 10)//Definindo o construtor desta forma deixamos como opicional o usuário definir ou não
+        public ListaGenerica(int capacidadeInicial = 10)//Definindo o construtor desta forma deixamos como opicional o usuário definir ou não
         {
-            _itens = new Object[capacidadeInicial];
+            _itens = new T[capacidadeInicial];
             _proxPosicao = 0;
         }
 
@@ -53,7 +53,7 @@ namespace ByteBank.SistemaAgencia
         /// Adiciona uma nova Object Corrente à lista 
         /// </summary>
         /// <param name="item">Define o item que deve ser adicionado à lista e deve ser do tipo  <see cref=" ContaCorrente"/></param>
-        public void Adicionar(Object item)
+        public void Adicionar(T item)
         {
             VerificarCapacidade(_proxPosicao + 1);
 
@@ -64,9 +64,9 @@ namespace ByteBank.SistemaAgencia
             _proxPosicao++;
         }
 
-        public void AdicionarVarios(params Object[] itens)
+        public void AdicionarVarios(params T[] itens)
         {
-            foreach (Object item in itens)
+            foreach (T item in itens)
             {
                 Adicionar(item);
             }
@@ -76,18 +76,18 @@ namespace ByteBank.SistemaAgencia
         {
             for (int i = 0; i < _proxPosicao; i++)
             {
-                Object item = _itens[i];
+                T item = _itens[i];
                 Console.WriteLine($"Item no indíce [{i}]: {_itens[i]}");
             }
         }
 
-        public void Remover(Object item)
+        public void Remover(T item)
         {
             int indiceItem = -1;
 
             for (int i = 0; i < _proxPosicao; i++)
             {
-                Object itemAtual = _itens[i];
+                T itemAtual = _itens[i];
 
                 if (itemAtual.Equals(item))
                 {
@@ -102,7 +102,7 @@ namespace ByteBank.SistemaAgencia
             }
 
             _proxPosicao--;
-            _itens[_proxPosicao] = null;
+           // _itens[_proxPosicao] = null;
         }
         private void VerificarCapacidade(int tamanhoNecessario)
         {
@@ -120,7 +120,7 @@ namespace ByteBank.SistemaAgencia
                 novoTamanho = tamanhoNecessario;
             }
 
-            Object[] novoArray = new Object[novoTamanho];
+            T[] novoArray = new T[novoTamanho];
 
             //Console.WriteLine("Aumentando capacidade da lista!");
 
@@ -131,7 +131,6 @@ namespace ByteBank.SistemaAgencia
             }
 
             _itens = novoArray;
-
         }
     }
 }
