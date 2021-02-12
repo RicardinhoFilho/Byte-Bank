@@ -9,7 +9,7 @@ namespace ByteBank.Modelos
     /// <summary>
     /// Define uma conta corrente do banco ByteBank
     /// </summary>
-    public class ContaCorrente
+    public class ContaCorrente:IComparable
     {
         private static int TaxaOperacao;
 
@@ -140,6 +140,28 @@ namespace ByteBank.Modelos
 
             //Numero e agência são os campos que definem se uma conta corrente é repetida ou não
             return (Numero == outraContaCorrente.Numero && Agencia == outraContaCorrente.Agencia);
+        }
+
+        public int CompareTo(object obj)
+        {
+            var outraConta = obj as ContaCorrente;
+
+            if (outraConta == null)
+            {
+                return 1;
+            }
+
+            if (Numero > outraConta.Numero)
+            {
+                return 1;
+            }
+
+            if (Numero < outraConta.Numero )
+            {
+                return -1;
+            }
+
+            return 0;
         }
     }
 

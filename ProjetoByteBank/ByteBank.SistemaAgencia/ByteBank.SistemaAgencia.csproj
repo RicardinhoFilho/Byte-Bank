@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comparadores\ComparerContaCorrentePorAgencia.cs" />
     <Compile Include="Extensoes\ListExtensoesGenericas.cs" />
     <Compile Include="ExtratorValorDeArgumentosURL.cs" />
     <Compile Include="ListaContaCorrente.cs" />

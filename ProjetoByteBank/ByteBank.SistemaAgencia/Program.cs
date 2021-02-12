@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ByteBank.Modelos;
 using Humanizer;
 using ByteBank.SistemaAgencia.Extensoes;
+using ByteBank.SistemaAgencia.Comparadores;
 
 namespace ByteBank.SistemaAgencia
 {
@@ -13,7 +14,43 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            ListaGenerica<int> listaDeIdades = new ListaGenerica<int>();
+
+            var listaContaCorrente = new List<ContaCorrente>()
+            {
+                new ContaCorrente(886,886173),
+                new ContaCorrente(887,886173),
+                new ContaCorrente(887,886173),
+                new ContaCorrente(881,886173),
+                new ContaCorrente(883,886173),
+                new ContaCorrente(883,886173)
+            };
+
+            Console.WriteLine("Antes da ordenação por agência: ");
+
+            foreach (var conta in listaContaCorrente)
+            {
+                Console.WriteLine($"Ag.{conta.Agencia}, Num.{conta.Numero}");
+            }
+
+            Console.ReadLine();
+            
+            listaContaCorrente.Sort(new ComparerContaCorrentePorAgencia());
+
+            Console.WriteLine("Após ordenação por agência: ");
+
+            foreach (var conta in listaContaCorrente)
+            {
+                Console.WriteLine($"Ag.{conta.Agencia}, Num.{conta.Numero}");
+            }
+
+            Console.ReadLine();
+
+        }    
+    }
+}
+
+
+/*ListaGenerica<int> listaDeIdades = new ListaGenerica<int>();
 
             listaDeIdades.AdicionarVarios(30, 45, 60, 55, 48, 22);
             listaDeIdades.EscreverListaNaTela();
@@ -54,12 +91,7 @@ namespace ByteBank.SistemaAgencia
 
             Console.WriteLine($"Média de saldo : {mediaSaldo}");
 
-            Console.ReadKey();
-
-        }    
-    }
-}
-
+            Console.ReadKey();*/
 
 /* ListaDeObjects listaIdades = new ListaDeObjects();
 
