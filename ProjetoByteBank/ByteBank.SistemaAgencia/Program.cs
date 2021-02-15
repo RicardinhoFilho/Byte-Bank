@@ -14,8 +14,57 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
+            
 
-            var listaContaCorrente = new List<ContaCorrente>()
+
+
+
+            Console.ReadLine();
+
+        }
+    }
+}
+
+    
+
+/* var listaContaCorrente = new List<ContaCorrente>()
+            {
+                new ContaCorrente(886,886173),
+                new ContaCorrente(887,886173),
+                new ContaCorrente(887,886173),
+                new ContaCorrente(881,886173),
+                null,
+                new ContaCorrente(883,886173),
+                new ContaCorrente(883,886173)
+            };
+
+            var listaContaCorrenteSemNulos = new List<ContaCorrente>();
+
+            foreach (var conta in listaContaCorrente)
+            {
+                if (conta != null)
+                {
+                    listaContaCorrenteSemNulos.Add(conta);
+                }
+            }
+
+            listaContaCorrenteSemNulos.Sort();
+
+            foreach (var conta in listaContaCorrenteSemNulos)
+            {
+                Console.WriteLine($"Ag.{conta.Agencia}; Conta.{conta.Numero}");
+            }
+
+            Console.ReadLine();
+
+            IOrderedEnumerable < ContaCorrente > ordenacaoPorAgencia = listaContaCorrenteSemNulos.OrderBy(ContaCorrente => ContaCorrente.Agencia);
+
+            foreach (var conta in ordenacaoPorAgencia)
+            {
+                Console.WriteLine($"Ag.{conta.Agencia}; Conta.{conta.Numero}");
+            }*/
+
+/*var listaContaCorrente = new List<ContaCorrente>()
             {
                 new ContaCorrente(886,886173),
                 new ContaCorrente(887,886173),
@@ -41,14 +90,7 @@ namespace ByteBank.SistemaAgencia
             foreach (var conta in listaContaCorrente)
             {
                 Console.WriteLine($"Ag.{conta.Agencia}, Num.{conta.Numero}");
-            }
-
-            Console.ReadLine();
-
-        }    
-    }
-}
-
+            }*/
 
 /*ListaGenerica<int> listaDeIdades = new ListaGenerica<int>();
 
