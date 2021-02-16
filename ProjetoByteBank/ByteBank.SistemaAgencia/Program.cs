@@ -7,25 +7,41 @@ using ByteBank.Modelos;
 using Humanizer;
 using ByteBank.SistemaAgencia.Extensoes;
 using ByteBank.SistemaAgencia.Comparadores;
+using System.IO;//para lermos o arquivo texto precisamos desta diretiva using de input e output 
 
 namespace ByteBank.SistemaAgencia
 {
-    class Program
+    partial class Program
     {
         static void Main(string[] args)
         {
-            
+            var enderecoDoArquivo = "contas.txt";
 
+            using (var fluxoDeArquivo = new FileStream(enderecoDoArquivo, FileMode.Open))
+            {
+                using (var leitor = new StreamReader(fluxoDeArquivo))
+                {
 
+                    //var linha = leitor.ReadLine();//ReadLine nos retorna a primeira linha
+                    //var linha = leitor.ReadToEnd();//Este método 'Read to end'lê todas as linhas e retorna em uma string gigante 
 
+                    while (!leitor.EndOfStream)
+                    {
+                        var linha = leitor.ReadLine();
+                        Console.WriteLine(linha);
+                    }
+
+                }
+            }
 
             Console.ReadLine();
-
         }
+
+
     }
 }
 
-    
+
 
 /* var listaContaCorrente = new List<ContaCorrente>()
             {
