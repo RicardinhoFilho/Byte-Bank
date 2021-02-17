@@ -46,7 +46,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="1_LidandoComStreamDiretamente.cs" />
+    <Compile Include="2_UsandoStreamReader.cs" />
     <Compile Include="Comparadores\ComparerContaCorrentePorAgencia.cs" />
+    <Compile Include="3_CriandoArquivo.cs" />
     <Compile Include="Extensoes\ListExtensoesGenericas.cs" />
     <Compile Include="ExtratorValorDeArgumentosURL.cs" />
     <Compile Include="ListaContaCorrente.cs" />
@@ -54,6 +56,8 @@
     <Compile Include="ListaGenerica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StreamBinario.cs" />
+    <Compile Include="UsarStreamDeEntradaDoConsole.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

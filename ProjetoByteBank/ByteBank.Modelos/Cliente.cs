@@ -8,8 +8,8 @@ namespace ByteBank.Modelos
 {
     public class Cliente
     {
-        private string Nome { get; set; }
-        private string CPF { get; set; }
+        public string Nome { get; private set; }
+        public string CPF { get; private set; }
         public string Profissao { get; set; }
         public Cliente(string cpf, string nome)
         {

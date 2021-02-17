@@ -15,31 +15,55 @@ namespace ByteBank.SistemaAgencia
     {
         static void Main(string[] args)
         {
-            var enderecoDoArquivo = "contas.txt";
+            File.WriteAllText("escrevendoComAClasseFile.txt", "Testando File.WriteAllText");
 
-            using (var fluxoDeArquivo = new FileStream(enderecoDoArquivo, FileMode.Open))
+            Console.WriteLine("Arquivo escrevendoComAClasseFile criado!");
+
+            var bytesArquivo = File.ReadAllBytes("contas.txt");
+            Console.WriteLine($"Arquivo contas.txt possui {bytesArquivo.Length} bytes");
+
+
+
+
+            var linhas = File.ReadAllLines("contas.txt");
+            Console.WriteLine($"Arquivo possui {linhas.Length} linhas!");
+
+            foreach (var linha in linhas)
             {
-                using (var leitor = new StreamReader(fluxoDeArquivo))
-                {
-
-                    //var linha = leitor.ReadLine();//ReadLine nos retorna a primeira linha
-                    //var linha = leitor.ReadToEnd();//Este método 'Read to end'lê todas as linhas e retorna em uma string gigante 
-
-                    while (!leitor.EndOfStream)
-                    {
-                        var linha = leitor.ReadLine();
-                        Console.WriteLine(linha);
-                    }
-
-                }
+                Console.WriteLine(linha);
             }
 
             Console.ReadLine();
+
+
+
+
+
+
+
+            Console.WriteLine("Digite o seu nome:");
+            var nome = Console.ReadLine();
+
+            Console.WriteLine(nome);
+
+
+            UsarStreamDeEntrada();
+
+            Console.WriteLine("Aplicação finalizada. . .");
+
+
+            Console.ReadLine();
+
         }
-
-
     }
 }
+
+
+
+
+
+
+
 
 
 
