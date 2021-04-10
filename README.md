@@ -3,7 +3,7 @@
 
 #Descrição e objetivo do projeto
 
-<p>Projeto desenvolvido durante formação(Alura) c# e orientação à objetos com instrutor Guilherme Matheus Costa,
+<p>Projeto desenvolvido durante formação(Alura) c# e orientação à objetos com instrutor <a href="https://github.com/GuilhermeMatheus">Guilherme Matheus Costa</a>,
 nesta formação aprendemos desde recursos básicos da linguagem, como variáveis, controle de fluxo e laços de repetição até os principais 
 conceitos do paradigma de orientação a objetos, como classes, herança e interfaces.</p>
 
